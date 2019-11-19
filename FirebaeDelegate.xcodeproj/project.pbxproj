@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		81F2142F2383757600CA151D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2142E2383757600CA151D /* AppDelegate.swift */; };
+		81F214312383757600CA151D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F214302383757600CA151D /* SceneDelegate.swift */; };
+		81F214382383757700CA151D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F214372383757700CA151D /* Assets.xcassets */; };
+		81F2143B2383757700CA151D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F214392383757700CA151D /* LaunchScreen.storyboard */; };
+		81F21443238376EA00CA151D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F21442238376EA00CA151D /* LoginViewController.swift */; };
+		81F214452383777A00CA151D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F214442383777A00CA151D /* SignUpViewController.swift */; };
+		81F2144723837BBA00CA151D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2144623837BBA00CA151D /* String+Extensions.swift */; };
+		81F2144923837BF300CA151D /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2144823837BF300CA151D /* CellIdentifiers.swift */; };
+		81F2144B23837C7C00CA151D /* PostsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2144A23837C7C00CA151D /* PostsListViewController.swift */; };
+		81F2144D23837D1B00CA151D /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2144C23837D1B00CA151D /* CreatePostViewController.swift */; };
+		81F2144F23837E0E00CA151D /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2144E23837E0E00CA151D /* PostDetailViewController.swift */; };
+		81F2145323837E9300CA151D /* RedditTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2145223837E9300CA151D /* RedditTabBarController.swift */; };
+		81F21458238382F200CA151D /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F21457238382F200CA151D /* UsersListViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		81F2142B2383757600CA151D /* FirebaeDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaeDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81F2142E2383757600CA151D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		81F214302383757600CA151D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		81F214372383757700CA151D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		81F2143A2383757700CA151D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		81F2143C2383757700CA151D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81F21442238376EA00CA151D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		81F214442383777A00CA151D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		81F2144623837BBA00CA151D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		81F2144823837BF300CA151D /* CellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
+		81F2144A23837C7C00CA151D /* PostsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListViewController.swift; sourceTree = "<group>"; };
+		81F2144C23837D1B00CA151D /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		81F2144E23837E0E00CA151D /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		81F2145223837E9300CA151D /* RedditTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditTabBarController.swift; sourceTree = "<group>"; };
+		81F21457238382F200CA151D /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81F214282383757600CA151D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		81F214222383757600CA151D = {
+			isa = PBXGroup;
+			children = (
+				81F2142D2383757600CA151D /* FirebaeDelegate */,
+				81F2142C2383757600CA151D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		81F2142C2383757600CA151D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81F2142B2383757600CA151D /* FirebaeDelegate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81F2142D2383757600CA151D /* FirebaeDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				81F2142E2383757600CA151D /* AppDelegate.swift */,
+				81F214302383757600CA151D /* SceneDelegate.swift */,
+				81F214372383757700CA151D /* Assets.xcassets */,
+				81F214392383757700CA151D /* LaunchScreen.storyboard */,
+				81F2143C2383757700CA151D /* Info.plist */,
+				81F2145623837F1E00CA151D /* Login */,
+				81F2145523837F1300CA151D /* Utilities */,
+				81F2145423837F0300CA151D /* Posts */,
+				81F2145223837E9300CA151D /* RedditTabBarController.swift */,
+				81F21457238382F200CA151D /* UsersListViewController.swift */,
+			);
+			path = FirebaeDelegate;
+			sourceTree = "<group>";
+		};
+		81F2145423837F0300CA151D /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				81F2144A23837C7C00CA151D /* PostsListViewController.swift */,
+				81F2144C23837D1B00CA151D /* CreatePostViewController.swift */,
+				81F2144E23837E0E00CA151D /* PostDetailViewController.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		81F2145523837F1300CA151D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				81F2144623837BBA00CA151D /* String+Extensions.swift */,
+				81F2144823837BF300CA151D /* CellIdentifiers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		81F2145623837F1E00CA151D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				81F21442238376EA00CA151D /* LoginViewController.swift */,
+				81F214442383777A00CA151D /* SignUpViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81F2142A2383757600CA151D /* FirebaeDelegate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81F2143F2383757700CA151D /* Build configuration list for PBXNativeTarget "FirebaeDelegate" */;
+			buildPhases = (
+				81F214272383757600CA151D /* Sources */,
+				81F214282383757600CA151D /* Frameworks */,
+				81F214292383757600CA151D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FirebaeDelegate;
+			productName = FirebaeDelegate;
+			productReference = 81F2142B2383757600CA151D /* FirebaeDelegate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81F214232383757600CA151D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Iram Fattah";
+				TargetAttributes = {
+					81F2142A2383757600CA151D = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 81F214262383757600CA151D /* Build configuration list for PBXProject "FirebaeDelegate" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81F214222383757600CA151D;
+			productRefGroup = 81F2142C2383757600CA151D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81F2142A2383757600CA151D /* FirebaeDelegate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81F214292383757600CA151D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81F2143B2383757700CA151D /* LaunchScreen.storyboard in Resources */,
+				81F214382383757700CA151D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81F214272383757600CA151D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81F2144923837BF300CA151D /* CellIdentifiers.swift in Sources */,
+				81F2144723837BBA00CA151D /* String+Extensions.swift in Sources */,
+				81F2144D23837D1B00CA151D /* CreatePostViewController.swift in Sources */,
+				81F21443238376EA00CA151D /* LoginViewController.swift in Sources */,
+				81F2144F23837E0E00CA151D /* PostDetailViewController.swift in Sources */,
+				81F2145323837E9300CA151D /* RedditTabBarController.swift in Sources */,
+				81F2142F2383757600CA151D /* AppDelegate.swift in Sources */,
+				81F2144B23837C7C00CA151D /* PostsListViewController.swift in Sources */,
+				81F21458238382F200CA151D /* UsersListViewController.swift in Sources */,
+				81F214452383777A00CA151D /* SignUpViewController.swift in Sources */,
+				81F214312383757600CA151D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		81F214392383757700CA151D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81F2143A2383757700CA151D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		81F2143D2383757700CA151D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		81F2143E2383757700CA151D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81F214402383757700CA151D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9HW99M5PX;
+				INFOPLIST_FILE = FirebaeDelegate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Iram.FirebaeDelegate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		81F214412383757700CA151D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9HW99M5PX;
+				INFOPLIST_FILE = FirebaeDelegate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Iram.FirebaeDelegate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81F214262383757600CA151D /* Build configuration list for PBXProject "FirebaeDelegate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81F2143D2383757700CA151D /* Debug */,
+				81F2143E2383757700CA151D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81F2143F2383757700CA151D /* Build configuration list for PBXNativeTarget "FirebaeDelegate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81F214402383757700CA151D /* Debug */,
+				81F214412383757700CA151D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81F214232383757600CA151D /* Project object */;
+}

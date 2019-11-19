@@ -1,0 +1,104 @@
+//
+//  CreatePostViewController.swift
+//  FirebaeDelegate
+//
+//  Created by C4Q on 11/18/19.
+//  Copyright © 2019 Iram Fattah. All rights reserved.
+//
+
+import UIKit
+
+class CreatePostViewController: UIViewController {
+
+    //MARK: UI Objects
+    
+    lazy var titleTextField: UITextField = {
+        let textField = UITextField()
+        textField.layer.borderColor = UIColor(red: 255/255, green: 86/255, blue: 0/255, alpha: 1).cgColor
+        textField.layer.borderWidth = 1
+        textField.backgroundColor = .white
+        textField.placeholder = "Title"
+        textField.font = UIFont(name: "Verdana", size: 14)
+        return textField
+    }()
+    
+    lazy var bodyTextView: UITextView = {
+        let textView = UITextView()
+        textView.isEditable = true
+        textView.layer.borderColor = UIColor(red: 255/255, green: 86/255, blue: 0/255, alpha: 1).cgColor
+        textView.layer.borderWidth = 1
+        textView.font = UIFont(name: "Verdana", size: 14)
+        return textView
+    }()
+    
+    lazy var postButton: UIButton = {
+        let button = UIButton()
+        button.setTitleColor(.white, for: .normal)
+        button.showsTouchWhenHighlighted = true
+        button.isEnabled = true
+        button.backgroundColor = UIColor(red: 255/255, green: 86/255, blue: 0/255, alpha: 1)
+        button.setTitle("Post", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 20)
+       // button.addTarget(self, action: #selector(postButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = UIColor(red: 198/255, green: 198/255, blue: 198/255, alpha: 1)
+        setupTitleTextField()
+        setupBodyTextView()
+        setupPostButton()
+
+        // Do any additional setup after loading the view.
+    }
+    
+    
+    
+    
+    //MARK: Private methods
+    
+    private func showAlert(with title: String, and message: String) {
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alertVC, animated: true, completion: nil)
+    }
+    
+    
+    //MARK: UI Setup
+    
+    private func setupTitleTextField() {
+        view.addSubview(titleTextField)
+        titleTextField.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            titleTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
+            titleTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            titleTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            titleTextField.heightAnchor.constraint(equalToConstant: 40)])
+    }
+    
+    private func setupBodyTextView() {
+        view.addSubview(bodyTextView)
+        bodyTextView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            bodyTextView.topAnchor.constraint(equalTo: titleTextField.bottomAnchor, constant: 16),
+            bodyTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            bodyTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            bodyTextView.heightAnchor.constraint(equalToConstant: 180)])
+    }
+
+    private func setupPostButton() {
+        view.addSubview(postButton)
+        postButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            postButton.topAnchor.constraint(equalTo: bodyTextView.bottomAnchor, constant: 16),
+            postButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            postButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            postButton.heightAnchor.constraint(lessThanOrEqualToConstant: 50)])
+    }
+
+    
+
+}
