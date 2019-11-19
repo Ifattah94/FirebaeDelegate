@@ -15,7 +15,7 @@ class SignUpViewController: UIViewController {
     lazy var headerLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.text = "Firebae: Create Account"
+        label.text = "Fave Spots: Create Account"
         label.font = UIFont(name: "Verdana-Bold", size: 28)
         label.textColor = UIColor(red: 255/255, green: 86/255, blue: 0/255, alpha: 1.0)
         label.backgroundColor = .clear

@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     lazy var logoLabel: UILabel = {
            let label = UILabel()
            label.numberOfLines = 0
-           label.text = "Firebae"
+           label.text = "Fave Spots"
            label.font = UIFont(name: "Verdana-Bold", size: 60)
            label.textColor = UIColor(red: 255/255, green: 86/255, blue: 0/255, alpha: 1.0)
            label.backgroundColor = .clear

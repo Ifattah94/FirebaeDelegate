@@ -14,12 +14,6 @@
 		81F21443238376EA00CA151D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F21442238376EA00CA151D /* LoginViewController.swift */; };
 		81F214452383777A00CA151D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F214442383777A00CA151D /* SignUpViewController.swift */; };
 		81F2144723837BBA00CA151D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2144623837BBA00CA151D /* String+Extensions.swift */; };
-		81F2144923837BF300CA151D /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2144823837BF300CA151D /* CellIdentifiers.swift */; };
-		81F2144B23837C7C00CA151D /* PostsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2144A23837C7C00CA151D /* PostsListViewController.swift */; };
-		81F2144D23837D1B00CA151D /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2144C23837D1B00CA151D /* CreatePostViewController.swift */; };
-		81F2144F23837E0E00CA151D /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2144E23837E0E00CA151D /* PostDetailViewController.swift */; };
-		81F2145323837E9300CA151D /* RedditTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2145223837E9300CA151D /* RedditTabBarController.swift */; };
-		81F21458238382F200CA151D /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F21457238382F200CA151D /* UsersListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,12 +26,6 @@
 		81F21442238376EA00CA151D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		81F214442383777A00CA151D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		81F2144623837BBA00CA151D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		81F2144823837BF300CA151D /* CellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
-		81F2144A23837C7C00CA151D /* PostsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListViewController.swift; sourceTree = "<group>"; };
-		81F2144C23837D1B00CA151D /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
-		81F2144E23837E0E00CA151D /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
-		81F2145223837E9300CA151D /* RedditTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditTabBarController.swift; sourceTree = "<group>"; };
-		81F21457238382F200CA151D /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +66,6 @@
 				81F2145623837F1E00CA151D /* Login */,
 				81F2145523837F1300CA151D /* Utilities */,
 				81F2145423837F0300CA151D /* Posts */,
-				81F2145223837E9300CA151D /* RedditTabBarController.swift */,
-				81F21457238382F200CA151D /* UsersListViewController.swift */,
 			);
 			path = FirebaeDelegate;
 			sourceTree = "<group>";
@@ -87,9 +73,6 @@
 		81F2145423837F0300CA151D /* Posts */ = {
 			isa = PBXGroup;
 			children = (
-				81F2144A23837C7C00CA151D /* PostsListViewController.swift */,
-				81F2144C23837D1B00CA151D /* CreatePostViewController.swift */,
-				81F2144E23837E0E00CA151D /* PostDetailViewController.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -98,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				81F2144623837BBA00CA151D /* String+Extensions.swift */,
-				81F2144823837BF300CA151D /* CellIdentifiers.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -182,15 +164,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81F2144923837BF300CA151D /* CellIdentifiers.swift in Sources */,
 				81F2144723837BBA00CA151D /* String+Extensions.swift in Sources */,
-				81F2144D23837D1B00CA151D /* CreatePostViewController.swift in Sources */,
 				81F21443238376EA00CA151D /* LoginViewController.swift in Sources */,
-				81F2144F23837E0E00CA151D /* PostDetailViewController.swift in Sources */,
-				81F2145323837E9300CA151D /* RedditTabBarController.swift in Sources */,
 				81F2142F2383757600CA151D /* AppDelegate.swift in Sources */,
-				81F2144B23837C7C00CA151D /* PostsListViewController.swift in Sources */,
-				81F21458238382F200CA151D /* UsersListViewController.swift in Sources */,
 				81F214452383777A00CA151D /* SignUpViewController.swift in Sources */,
 				81F214312383757600CA151D /* SceneDelegate.swift in Sources */,
 			);
