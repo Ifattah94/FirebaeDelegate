@@ -14,6 +14,7 @@
 		81F21443238376EA00CA151D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F21442238376EA00CA151D /* LoginViewController.swift */; };
 		81F214452383777A00CA151D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F214442383777A00CA151D /* SignUpViewController.swift */; };
 		81F2144723837BBA00CA151D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2144623837BBA00CA151D /* String+Extensions.swift */; };
+		81F2145A238469E300CA151D /* MainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F21459238469E300CA151D /* MainMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		81F21442238376EA00CA151D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		81F214442383777A00CA151D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		81F2144623837BBA00CA151D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		81F21459238469E300CA151D /* MainMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,16 +67,9 @@
 				81F2143C2383757700CA151D /* Info.plist */,
 				81F2145623837F1E00CA151D /* Login */,
 				81F2145523837F1300CA151D /* Utilities */,
-				81F2145423837F0300CA151D /* Posts */,
+				81F21459238469E300CA151D /* MainMapViewController.swift */,
 			);
 			path = FirebaeDelegate;
-			sourceTree = "<group>";
-		};
-		81F2145423837F0300CA151D /* Posts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Posts;
 			sourceTree = "<group>";
 		};
 		81F2145523837F1300CA151D /* Utilities */ = {
@@ -164,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F2145A238469E300CA151D /* MainMapViewController.swift in Sources */,
 				81F2144723837BBA00CA151D /* String+Extensions.swift in Sources */,
 				81F21443238376EA00CA151D /* LoginViewController.swift in Sources */,
 				81F2142F2383757600CA151D /* AppDelegate.swift in Sources */,

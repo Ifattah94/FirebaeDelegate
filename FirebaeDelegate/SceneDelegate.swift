@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
                //MARK: TODO - switch root view controller on firebase current user.
                //Discussion - is the iOS currentUser object token-safe with the authentication service?
-               window?.rootViewController = LoginViewController()
+               window?.rootViewController = MainMapViewController()
                window?.makeKeyAndVisible()
     }
 
