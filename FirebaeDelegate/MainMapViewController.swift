@@ -32,6 +32,7 @@ class MainMapViewController: UIViewController {
         setupMapView()
         setupMap()
         requestLocationAndAuthorizeIfNeeded()
+        setupLongPressGesture()
         
 
     }
@@ -63,7 +64,45 @@ class MainMapViewController: UIViewController {
         let initialRegion = MKCoordinateRegion(center: initialLocation, latitudinalMeters: searchRadius, longitudinalMeters: searchRadius)
                   mapView.setRegion(initialRegion, animated: true)
     }
+    
+    private func addAnnotation(location: CLLocationCoordinate2D, title: String){
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = location
+            annotation.title = title
+            self.mapView.addAnnotation(annotation)
+    }
 
+    private func showAlertForAddingNewPoint(location: CLLocationCoordinate2D) {
+        let alertController = UIAlertController(title: "New Point", message: "Enter Info for new Point", preferredStyle: .alert)
+               
+               alertController.addTextField { (texField) in
+                   texField.placeholder = "Title"
+            
+               }
+        
+        
+        let addAction = UIAlertAction(title: "Add", style: .default) { (action) in
+            guard let title = alertController.textFields?[0].text else {return}
+            
+            self.addAnnotation(location: location, title: title)
+        }
+        
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default) { (action) in
+            
+        }
+        alertController.addAction(addAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+        
+        
+    }
+    
+    private func setupLongPressGesture() {
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongTap(sender:)))
+        mapView.addGestureRecognizer(longPressGesture)
+    }
+    
     
     
     private func setupMap() {
@@ -73,6 +112,15 @@ class MainMapViewController: UIViewController {
     }
     
     
+    //MARK: Obj C Methods
+    
+    @objc func handleLongTap(sender: UILongPressGestureRecognizer) {
+        if sender.state == .began {
+            let locationInView = sender.location(in: mapView)
+            let locationOnMap = mapView.convert(locationInView, toCoordinateFrom: mapView)
+            showAlertForAddingNewPoint(location: locationOnMap)
+        }
+    }
     
     
     
