@@ -24,7 +24,15 @@ class MainMapViewController: UIViewController {
     private let initialLocation = CLLocationCoordinate2D(latitude: 40.742054, longitude: -73.769417)
     private let searchRadius: CLLocationDistance = 2000
     
+    private var pins = [Pin]() {
+        didSet {
+            mapView.addAnnotations(pins)
+            mapView.showAnnotations(pins, animated: true)
+        }
+    }
+      
     
+    //MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +43,11 @@ class MainMapViewController: UIViewController {
         setupLongPressGesture()
         
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadPins()
     }
     
     
@@ -65,6 +78,18 @@ class MainMapViewController: UIViewController {
                   mapView.setRegion(initialRegion, animated: true)
     }
     
+    
+    private func loadPins() {
+        FirestoreService.manager.getAllPins { (result) in
+            switch result {
+            case .success(let pins):
+                self.pins = pins
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
     private func addAnnotation(location: CLLocationCoordinate2D, title: String){
             let annotation = MKPointAnnotation()
             annotation.coordinate = location
@@ -84,7 +109,18 @@ class MainMapViewController: UIViewController {
         let addAction = UIAlertAction(title: "Add", style: .default) { (action) in
             guard let title = alertController.textFields?[0].text else {return}
             
-            self.addAnnotation(location: location, title: title)
+            guard let user = FirebaseAuthService.manager.currentUser else {
+                print("You must be logged in to create a pin")
+                return
+            }
+            let lat = Double(location.latitude)
+            let long = Double(location.longitude)
+            let newPin = Pin(title: title, creatorID: user.uid, lat: lat, long: long)
+            
+            FirestoreService.manager.createPin(pin: newPin) {[weak self] (result)
+                in
+                self?.handleCreatePinResponse(location: location, title: title, with: result)
+            }
         }
         
         
@@ -96,6 +132,16 @@ class MainMapViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
         
         
+    }
+    
+    
+    private func handleCreatePinResponse( location: CLLocationCoordinate2D, title: String, with result: Result<Void, Error>) {
+        switch result {
+        case .success:
+            self.addAnnotation(location: location, title: title)
+        case .failure(let error):
+            print(error)
+        }
     }
     
     private func setupLongPressGesture() {
@@ -143,6 +189,32 @@ class MainMapViewController: UIViewController {
 
 
 extension MainMapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let annotation = annotation as? Pin else {return nil}
+        
+        let identifier = "marker"
+        
+        var view: MKMarkerAnnotationView
+        
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView {
+            dequeuedView.annotation = annotation
+            view = dequeuedView
+        } else {
+             view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.canShowCallout = true
+            view.calloutOffset = CGPoint(x: -5, y: 5)
+            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        return view
+    
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let location = view.annotation as! Pin
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        location.getMapItem().openInMaps(launchOptions: launchOptions)
+    }
+    
     
 }
 

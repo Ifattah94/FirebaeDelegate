@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
            button.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 14)
            button.backgroundColor = UIColor(red: 255/255, green: 67/255, blue: 0/255, alpha: 1)
            button.layer.cornerRadius = 5
-           //button.addTarget(self, action: #selector(tryLogin), for: .touchUpInside)
+           button.addTarget(self, action: #selector(tryLogin), for: .touchUpInside)
            button.isEnabled = false
            return button
        }()
@@ -102,8 +102,57 @@ class LoginViewController: UIViewController {
            present(signupVC, animated: true, completion: nil)
        }
     
+    @objc func tryLogin() {
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            showAlert(with: "Error", and: "Please fill out all fields.")
+            return
+        }
+        
+        //MARK: TODO - remove whitespace (if any) from email/password
+        
+        guard email.isValidEmail else {
+            showAlert(with: "Error", and: "Please enter a valid email")
+            return
+        }
+        
+        guard password.isValidPassword else {
+            showAlert(with: "Error", and: "Please enter a valid password. Passwords must have at least 8 characters.")
+            return
+        }
+        
+        FirebaseAuthService.manager.loginUser(email: email.lowercased(), password: password) { (result) in
+            self.handleLoginResponse(with: result)
+        }
+    }
+    
     
     //MARK: Private methods
+    
+    private func handleLoginResponse(with result: Result<(), Error>) {
+        switch result {
+            
+        case .success:
+            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                let sceneDelegate = windowScene.delegate as? SceneDelegate, let window = sceneDelegate.window
+                else {
+                    //MARK: TODO - handle could not swap root view controller
+                    return
+            }
+            
+            UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromBottom, animations: {
+                if FirebaseAuthService.manager.currentUser != nil {
+                    window.rootViewController = MainMapViewController()
+                    
+                } else {
+                    print("No current user")
+                }
+            }, completion: nil)
+       case .failure(let error):
+        self.showAlert(with: "Error Creating User", and: error.localizedDescription)
+        }
+    }
+    
+    
     
     private func showAlert(with title: String, and message: String) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
